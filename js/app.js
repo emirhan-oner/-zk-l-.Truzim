@@ -49,14 +49,15 @@ async function applySupabaseSettings() {
 
         settings.forEach(set => {
             const val = set.setting_value;
+            if (!val || val.trim() === '') return;
             switch (set.setting_key) {
                 case 'welcome_bg':
                     const welcomeHero = document.getElementById('welcome-hero');
-                    if (welcomeHero) welcomeHero.style.backgroundImage = `url('${val}')`;
+                    if (welcomeHero && val.startsWith('http')) welcomeHero.style.backgroundImage = `url('${val}')`;
                     break;
                 case 'hero_bg':
                     const heroSec = document.getElementById('home');
-                    if (heroSec) heroSec.style.backgroundImage = `url('${val}')`;
+                    if (heroSec && val.startsWith('http')) heroSec.style.backgroundImage = `url('${val}')`;
                     break;
                 case 'welcome_title':
                     const luxTitle = document.querySelector('.luxury-title');
