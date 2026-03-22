@@ -5,14 +5,6 @@ let currencySymbols = { TRY: '₺', USD: '$', EUR: '€', GBP: '£' };
 
 let globalObserver; // Global observer for scroll animations
 
-// Supabase Configuration
-const SUPABASE_URL = 'https://utumakcczdgpwrwvcqhv.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_AG9IRVZBDXIXh31_taytgg_QdPTwYao';
-let supabaseClient = null;
-
-if (typeof supabase !== 'undefined') {
-    supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-}
 
 // Initialize App
 document.addEventListener('DOMContentLoaded', async function () {
@@ -26,12 +18,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     renderPriceList();
     renderGallery();
 
-    // Apply Supabase dynamism
-    if (supabaseClient) {
-        await applySupabaseSettings();
-        await syncFleetFromSupabase();
-    }
-
     initVehicleModal();
     initStatsAnimation();
     initScrollAnimations();
@@ -42,74 +28,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     initCurrencySelector();
     startAutoSlide();
 });
-async function applySupabaseSettings() {
-    try {
-        const { data: settings, error } = await supabaseClient.from('site_settings').select('*');
-        if (error || !settings) return;
-
-        settings.forEach(set => {
-            const val = set.setting_value;
-            if (!val || val.trim() === '') return;
-            switch (set.setting_key) {
-                case 'welcome_bg':
-                    const welcomeHero = document.getElementById('welcome-hero');
-                    if (welcomeHero && val.startsWith('http')) welcomeHero.style.backgroundImage = `url('${val}')`;
-                    break;
-                case 'hero_bg':
-                    const heroSec = document.getElementById('home');
-                    if (heroSec && val.startsWith('http')) heroSec.style.backgroundImage = `url('${val}')`;
-                    break;
-                case 'welcome_title':
-                    const luxTitle = document.querySelector('.luxury-title');
-                    if (luxTitle) luxTitle.innerText = val;
-                    // Also update logo alt
-                    const logoImg = document.querySelector('.maybach-emblem img');
-                    if(logoImg) logoImg.alt = val + ' Logo';
-                    break;
-                case 'welcome_slogan':
-                    const slogan = document.querySelector('.welcome-slogan');
-                    if (slogan) slogan.innerText = val;
-                    break;
-                case 'welcome_desc':
-                    const desc = document.querySelector('.welcome-desc');
-                    if (desc) desc.innerText = val;
-                    break;
-                case 'hero_title':
-                    const hTitle = document.querySelector('.hero-title');
-                    if (hTitle) hTitle.innerHTML = val;
-                    break;
-            }
-        });
-    } catch (e) {
-        console.error("Supabase settings apply error:", e);
-    }
-}
-
-async function syncFleetFromSupabase() {
-    try {
-        const { data: vehicles, error } = await supabaseClient.from('vehicles').select('*');
-        if (error || !vehicles || vehicles.length === 0) return;
-
-        // Map Supabase vehicles to fleetData format
-        const remoteFleet = vehicles.map(v => ({
-            id: v.id,
-            name: v.name,
-            type: v.type,
-            images: [v.image_url],
-            interior: v.features || [],
-            price: v.daily_price || 8500
-        }));
-
-        // Merge or replace
-        // For simplicity: replace fleetData if we have remote vehicles
-        if (remoteFleet.length > 0) {
-            fleetData = remoteFleet;
-            renderFleet();
-        }
-    } catch (e) {
-        console.error("Supabase fleet sync error:", e);
-    }
-}
 // Tab Switching
 function initTabs() {
     const tabButtons = document.querySelectorAll('.tab-btn');
