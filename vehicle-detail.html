@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araç Detayı - Özkılıç Turizm</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="header-top">
+                <a href="index.html" class="logo">
+                    <h1>Özkılıç Turizm</h1>
+                    <span class="logo-sub">Şoförlü Araç Kiralama & VIP Transfer</span>
+                </a>
+                <div class="header-actions">
+                    <div class="header-contact">
+                        <a href="tel:+905551234567" class="phone-link" title="Ara"><i class="fas fa-phone"></i><span>+90 555 123 45 67</span></a>
+                        <a href="https://wa.me/905551234567" class="whatsapp-link" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i><span>WhatsApp</span></a>
+                    </div>
+                    <div class="mobile-menu-toggle" aria-label="Menü"><i class="fas fa-bars"></i></div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="index.html#fleet-page">Filomuz</a></li>
+                    <li><a href="index.html#price-list">Fiyat Listesi</a></li>
+                    <li><a href="index.html#contact">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Vehicle Detail Section -->
+    <section class="vehicle-detail-section">
+        <div class="container">
+            <a href="index.html#fleet-page" class="back-link">
+                <i class="fas fa-arrow-left"></i> Ana Sayfaya Dön
+            </a>
+            <div id="vehicleDetailContent">
+                <!-- Araç detayları buraya yüklenecek -->
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/905551234567" class="whatsapp-float" target="_blank" title="WhatsApp ile iletişime geçin">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="js/data.js"></script>
+    <script>
+        document.querySelector('.mobile-menu-toggle')?.addEventListener('click', function() {
+            document.querySelector('.nav-list')?.classList.toggle('active');
+            this.classList.toggle('active');
+            document.body.style.overflow = document.querySelector('.nav-list')?.classList.contains('active') ? 'hidden' : '';
+        });
+        document.querySelectorAll('.nav-list a').forEach(function(a) {
+            a.addEventListener('click', function() {
+                document.querySelector('.nav-list')?.classList.remove('active');
+                document.querySelector('.mobile-menu-toggle')?.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
+    <script>
+        // URL'den araç ID'sini al
+        const urlParams = new URLSearchParams(window.location.search);
+        const vehicleId = parseInt(urlParams.get('id'));
+
+        // Araç bilgilerini yükle
+        if (vehicleId && typeof fleetData !== 'undefined') {
+            const vehicle = fleetData.find(car => car.id === vehicleId);
+            
+            if (vehicle) {
+                const content = document.getElementById('vehicleDetailContent');
+                content.innerHTML = `
+                    <div class="vehicle-detail-header">
+                        <h1>${vehicle.name}</h1>
+                        <span class="vehicle-type-badge ${vehicle.type}">${vehicle.type === 'maybach' ? 'Maybach' : 'Passat'}</span>
+                    </div>
+                    
+                    <div class="vehicle-images-gallery">
+                        ${vehicle.images.map(img => `
+                            <div class="vehicle-image-item">
+                                <img src="${img}" alt="${vehicle.name}">
+                            </div>
+                        `).join('')}
+                    </div>
+                    
+                    <div class="vehicle-detail-content">
+                        <div class="vehicle-features">
+                            <h2><i class="fas fa-list"></i> İç Donanım Özellikleri</h2>
+                            <ul class="vehicle-features-list">
+                                ${vehicle.interior.map(feature => `
+                                    <li><i class="fas fa-check"></i> ${feature}</li>
+                                `).join('')}
+                            </ul>
+                        </div>
+                        
+                        <div class="vehicle-booking">
+                            <h2><i class="fas fa-calendar-check"></i> Rezervasyon</h2>
+                            <p>Bu araç için rezervasyon yapmak veya fiyat bilgisi almak için bizimle iletişime geçin.</p>
+                            <div class="vehicle-contact-buttons">
+                                <a href="tel:+905551234567" class="btn-primary">
+                                    <i class="fas fa-phone"></i> Hemen Ara
+                                </a>
+                                <a href="https://wa.me/905551234567" class="btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                                <a href="index.html#price-inquiry" class="btn-secondary">
+                                    <i class="fas fa-calculator"></i> Fiyat Sorgula
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                document.getElementById('vehicleDetailContent').innerHTML = `
+                    <div class="error-message">
+                        <h2>Araç bulunamadı</h2>
+                        <p>Üzgünüz, aradığınız araç bulunamadı.</p>
+                        <a href="index.html#fleet-page" class="btn-primary">Filomuzu Görüntüle</a>
+                    </div>
+                `;
+            }
+        } else {
+            document.getElementById('vehicleDetailContent').innerHTML = `
+                <div class="error-message">
+                    <h2>Geçersiz istek</h2>
+                    <p>Lütfen geçerli bir araç seçin.</p>
+                    <a href="index.html#fleet-page" class="btn-primary">Filomuzu Görüntüle</a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

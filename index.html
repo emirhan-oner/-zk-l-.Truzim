@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Özkılıç Turizm | VIP Şoförlü Araç Kiralama & Transfer Hizmetleri</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="header-top">
+                <div class="logo">
+                    <h1>Özkılıç Turizm</h1>
+                    <span class="logo-sub">Şoförlü Araç Kiralama & VIP Transfer</span>
+                </div>
+                <div class="header-actions">
+                    <div class="header-contact">
+                        <select id="currencySelector" class="currency-selector" title="Para Birimi / Currency">
+                            <option value="TRY">₺ TL</option>
+                            <option value="USD">$ USD</option>
+                            <option value="EUR">€ EUR</option>
+                            <option value="GBP">£ GBP</option>
+                        </select>
+                        <a href="tel:+905513854575" class="phone-link" title="Ara">
+                            <i class="fas fa-phone"></i>
+                            <span>+90 551 385 45 75</span>
+                        </a>
+
+                        <a href="https://wa.me/905513854575" class="whatsapp-link" target="_blank" title="WhatsApp">
+
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                        <a href="mailto:info@ozkilicturizm.com" class="email-link" title="E-posta">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@ozkilicturizm.com</span>
+                        </a>
+                    </div>
+                    <button id="headerSearchBtn" class="search-btn" title="Ara" style="background:none;border:none;color:var(--gold-color);cursor:pointer;font-size:1.5rem;margin: 0 15px;display:flex;align-items:center; z-index: 1001;">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <div class="mobile-menu-toggle" aria-label="Menü">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <div class="nav-mobile-header">
+                    <div class="logo">
+                        <h1>ÖZKILIÇ VIP</h1>
+                    </div>
+                    <div class="nav-close" id="navClose">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="nav-mobile-categories">
+                    <a href="#services" class="m-nav-cat">
+                        <i class="fas fa-shuttle-van"></i>
+                        <span>Hizmetler</span>
+                    </a>
+                    <a href="#fleet-page" class="m-nav-cat">
+                        <i class="fas fa-gem"></i>
+                        <span>VIP Filo</span>
+                    </a>
+                    <a href="#tours" class="m-nav-cat">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>Turlar</span>
+                    </a>
+                    <a href="#price-list" class="m-nav-cat">
+                        <i class="fas fa-tags"></i>
+                        <span>Fiyatlar</span>
+                    </a>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="#home"><i class="fas fa-home"></i> Ana Sayfa</a></li>
+                    <li class="dropdown">
+                        <a href="#services">Hizmetlerimiz <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#fleet">Filo Kiralama</a></li>
+                            <li><a href="#car-rental">Araç Kiralama</a></li>
+                            <li><a href="#chauffeur">Şoförlü Araç Kiralama</a></li>
+                            <li><a href="#vip-chauffeur">Şoförlü VIP Araç Kiralama</a></li>
+                            <li><a href="#wedding">Düğün Aracı Kiralama</a></li>
+                            <li><a href="#intercity">Şehirlerarası VIP Transfer</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#price-list">Hizmet Bölgeleri <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#price-list">ESB - Ankara Esenboğa Transfer</a></li>
+                            <li><a href="#price-list">Ankara İçi Günlük Tahsis</a></li>
+                            <li><a href="#price-list">Çankaya VIP Transfer</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#fleet-page">Filomuz</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#price-list">Fiyat Listesi</a></li>
+                    <li><a href="#price-inquiry">Fiyat Sorgulama</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Welcome Hero Section (Maybach Concept) -->
+    <section id="welcome-hero" class="welcome-hero" data-supabase-key="welcome_bg">
+        <div class="welcome-overlay"></div>
+        <div class="welcome-content">
+            <div class="welcome-logo-container">
+                <div class="maybach-emblem">
+                    <img src="images/Ekran görüntüsü 2026-02-27 212144.png" alt="Özkılıç Turizm Logo" data-supabase-key="welcome_logo">
+                </div>
+                <h2 class="luxury-title">ÖZKILIÇ TURİZM</h2>
+                <div class="gold-line"></div>
+            </div>
+            <h1 class="welcome-slogan">Prestijin ve Konforun Zirvesi</h1>
+            <p class="welcome-desc">Mercedes-Benz Vito VIP ayrıcalığıyla kusursuz bir yolculuğa hazırlanın.</p>
+
+            <a href="#home" class="btn-discover">Keşfet & Rezervasyon <i class="fas fa-arrow-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" data-supabase-key="hero_bg"
+        style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920'); background-size: cover; background-position: center;">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Özkılıç Turizm<br>Türkiye'nin En İyi Havalimanı Transfer & Şoförlü Araç
+                    Kiralama
+                </h1>
+                <div class="hero-form">
+                    <div class="form-tabs">
+                        <button class="tab-btn active" data-tab="transfer">
+                            <i class="fas fa-plane"></i> Transfer
+                        </button>
+                        <button class="tab-btn" data-tab="chauffeur">
+                            <i class="fas fa-car"></i> Şoförlü Araç Kiralama
+                        </button>
+                    </div>
+                    <form id="transferForm" class="booking-form active">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-map-marker-alt"></i> Nereden</label>
+                                <select id="fromLocation" required>
+                                    <option value="">Başlangıç seçin</option>
+                                    <optgroup label="Havalimanı">
+                                        <option value="ESB">ESB - Ankara Esenboğa Havalimanı</option>
+                                    </optgroup>
+                                    <optgroup label="Ankara İlçeleri / Semtleri">
+                                        <option value="cankaya">Çankaya Merkez</option>
+                                        <option value="atakule">Atakule / Gaziosmanpaşa</option>
+                                        <option value="bilkent">Bilkent</option>
+                                        <option value="incek">İncek</option>
+                                        <option value="umitkoy">Ümitköy / Çayyolu</option>
+                                        <option value="cayyolu">Yaşamkent</option>
+                                        <option value="golbasi">Gölbaşı</option>
+                                        <option value="yenimahalle">Yenimahalle</option>
+                                        <option value="kecioren">Keçiören</option>
+                                        <option value="eryaman">Eryaman</option>
+                                        <option value="batikent">Batıkent</option>
+                                        <option value="cukurambar">Çukurambar</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-map-marker-alt"></i> Nereye</label>
+                                <select id="toLocation" required>
+                                    <option value="">Varış seçin</option>
+                                    <optgroup label="Havalimanı">
+                                        <option value="ESB">ESB - Ankara Esenboğa Havalimanı</option>
+                                    </optgroup>
+                                    <optgroup label="Ankara İlçeleri / Semtleri">
+                                        <option value="cankaya">Çankaya Merkez</option>
+                                        <option value="atakule">Atakule / Gaziosmanpaşa</option>
+                                        <option value="bilkent">Bilkent</option>
+                                        <option value="incek">İncek</option>
+                                        <option value="umitkoy">Ümitköy / Çayyolu</option>
+                                        <option value="cayyolu">Yaşamkent</option>
+                                        <option value="golbasi">Gölbaşı</option>
+                                        <option value="yenimahalle">Yenimahalle</option>
+                                        <option value="kecioren">Keçiören</option>
+                                        <option value="eryaman">Eryaman</option>
+                                        <option value="batikent">Batıkent</option>
+                                        <option value="cukurambar">Çukurambar</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-calendar"></i> Tarih</label>
+                                <input type="date" required>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-search"></i> Sorgula
+                            </button>
+                        </div>
+                    </form>
+                    <form id="chauffeurForm" class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label><i class="fas fa-map-marked-alt"></i> Hizmet Bölgesi</label>
+                                <select required>
+                                    <option value="">Hizmet Bölgesi Seçin</option>
+                                    <option value="ankara_merkez">Ankara Merkez (İçi)</option>
+                                    <option value="ankara_cevre">Ankara Çevre İlçeler</option>
+                                    <option value="esenboga">Esenboğa Havalimanı Bağlantılı</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-clock"></i> Hizmet Saati</label>
+                                <input type="time" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fas fa-calendar-alt"></i> Hizmet Başlangıcı</label>
+                                <input type="date" required>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-search"></i> Sorgula
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hakkımızda - Vizyon & Misyon -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Hakkımızda</h2>
+            <p class="about-intro">Özkılıç Turizm olarak yıllardır sektördeki deneyimimizle müşterilerimize en
+                kaliteli
+                transfer ve şoförlü araç kiralama hizmetlerini sunmaktayız.</p>
+            <div class="vision-mission-grid">
+                <div class="vision-mission-card">
+                    <div class="vm-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Vizyonumuz</h3>
+                    <p>Türkiye'nin önde gelen VIP transfer ve lüks araç kiralama firması olarak, sektörde yenilikçi
+                        hizmet anlayışıyla müşteri memnuniyetini en üst seviyede tutmak ve Türkiye genelinde
+                        güvenilir
+                        marka kimliğimizi pekiştirmek.</p>
+                </div>
+                <div class="vision-mission-card">
+                    <div class="vm-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Misyonumuz</h3>
+                    <p>Mercedes Maybach ve Volkswagen Passat filosuyla konforlu, güvenli ve zamanında hizmet
+                        sunarak;
+                        havalimanı transferlerinden özel günlere kadar her türlü ulaşım ihtiyacını profesyonel
+                        şoförlerimiz ve temiz araçlarımızla karşılamak.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filo Section - 6 Araç -->
+    <section id="fleet-page" class="fleet-section">
+        <div class="container">
+            <h2 class="section-title">Lüks Araç Filosu</h2>
+            <p class="section-subtitle" style="text-align:center;margin-bottom:40px;">Maybach ve Passat araçlarımızı
+                keşfedin - tıklayarak iç özellikleri görüntüleyin</p>
+            <div class="fleet-grid" id="fleetGrid">
+                <!-- Araçlar data.js'den yüklenecek -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Fiyat Listesi -->
+    <section id="price-list" class="price-list-section">
+        <div class="container">
+            <h2 class="section-title">Transfer Fiyat Listesi</h2>
+            <p class="section-subtitle" style="text-align:center;margin-bottom:30px;">Havalimanları arası örnek
+                fiyatlar
+                (Araç sınıfına göre değişkenlik gösterebilir)</p>
+            <div class="price-table-wrapper">
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Güzergah</th>
+                            <th>Mercedes E-Class (TL)</th>
+                            <th>Mercedes S-Class (TL)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="priceTableBody">
+                        <!-- Fiyatlar data.js'den -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fiyat Sorgulama Formu -->
+    <section id="price-inquiry" class="price-inquiry-section">
+        <div class="container">
+            <h2 class="section-title">Fiyat Sorgulama</h2>
+            <form id="priceInquiryForm" class="price-inquiry-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fas fa-plane-arrival"></i> Kalkış</label>
+                        <select id="inquiryFrom" required>
+                            <option value="">Seçin</option>
+                            <option value="ESB">ESB - Ankara Esenboğa Havalimanı</option>
+                            <option value="cankaya">Çankaya Merkez</option>
+                            <option value="atakule">Atakule / Gaziosmanpaşa</option>
+                            <option value="bilkent">Bilkent</option>
+                            <option value="incek">İncek</option>
+                            <option value="umitkoy">Ümitköy / Çayyolu</option>
+                            <option value="cayyolu">Yaşamkent</option>
+                            <option value="cukurambar">Çukurambar</option>
+                            <option value="golbasi">Gölbaşı</option>
+                            <option value="yenimahalle">Yenimahalle</option>
+                            <option value="eryaman">Eryaman</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-plane-departure"></i> Varış</label>
+                        <select id="inquiryTo" required>
+                            <option value="">Seçin</option>
+                            <option value="ESB">ESB - Ankara Esenboğa Havalimanı</option>
+                            <option value="cankaya">Çankaya Merkez</option>
+                            <option value="atakule">Atakule / Gaziosmanpaşa</option>
+                            <option value="bilkent">Bilkent</option>
+                            <option value="incek">İncek</option>
+                            <option value="umitkoy">Ümitköy / Çayyolu</option>
+                            <option value="cayyolu">Yaşamkent</option>
+                            <option value="cukurambar">Çukurambar</option>
+                            <option value="golbasi">Gölbaşı</option>
+                            <option value="yenimahalle">Yenimahalle</option>
+                            <option value="eryaman">Eryaman</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-car"></i> Araç Sınıfı</label>
+                        <select id="inquiryCar" required>
+                            <option value="">Seçin</option>
+                            <option value="s_class">S-Class / 7 Serisi</option>
+                            <option value="es_class">E-Class / 5 Serisi</option>
+                            <option value="suv">VIP SUV</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fas fa-calendar"></i> Tarih</label>
+                        <input type="date" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-calculator"></i> Fiyat Sorgula
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Turlar Section -->
+    <section class="tours-section">
+        <div class="container">
+            <h2 class="section-title">Turlar</h2>
+            <div class="tours-grid" id="toursGrid">
+                <!-- Tours will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Müşteri Yorumları Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Müşteri Yorumları</h2>
+                <p class="section-subtitle">"Tripadvisor" Üzerinden Sağlanmaktadır</p>
+            </div>
+            <div class="reviews-slider" id="reviewsSlider">
+                <!-- Reviews will be loaded dynamically -->
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn prev" id="prevReview">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="slider-btn next" id="nextReview">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- İstatistikler Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-users"></i></div>
+                    <div class="stat-number" data-count="588">0</div>
+                    <div class="stat-label">Kişi Bize Güvendi</div>
+                    <div class="stat-date">2019 Nisan'dan Beri</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-car"></i></div>
+                    <div class="stat-number" data-count="6">0</div>
+                    <div class="stat-label">Lüks Araç Filosu</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-star"></i></div>
+                    <div class="stat-number" data-count="20">0</div>
+                    <div class="stat-label">Müşteri Yorumu</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fas fa-clock"></i></div>
+                    <div class="stat-number" data-count="7">0</div>
+                    <div class="stat-label">24 Saat Hizmet</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neden Biz Section -->
+    <section class="why-us-section">
+        <div class="container">
+            <h2 class="section-title">Neden Özkılıç Turizm</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>En Uygun Fiyat Garantisi</h3>
+                    <p>Kaliteli ve güler yüzlü bir hizmeti en uygun fiyatlar ile sizlere sunmaya gayret ediyoruz.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <h3>Lüks Araç Filosu</h3>
+                    <p>Sınıfının lideri lüks donanımlı araçlar ile transferleriniz gerçekleştirilmektedir.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>7/24 Aktif Hizmet</h3>
+                    <p>Kaliteli, güvenli, konforlu ve en ucuz transfer planlarınız için 7/24 hizmetinizdeyiz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetlerimiz Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Hizmetlerimiz</h2>
+            <div class="services-grid">
+                <div class="service-card" id="fleet">
+                    <i class="fas fa-car-side"></i>
+                    <h3>Filo Kiralama</h3>
+                    <p>Kurumsal etkinlikleriniz için Maybach ve Passat filosuyla eksiksiz filo hizmeti.</p>
+                </div>
+                <div class="service-card" id="car-rental">
+                    <i class="fas fa-key"></i>
+                    <h3>Araç Kiralama</h3>
+                    <p>Lüks araç kiralama seçenekleriyle ihtiyacınıza uygun çözümler.</p>
+                </div>
+                <div class="service-card" id="chauffeur">
+                    <i class="fas fa-user-tie"></i>
+                    <h3>Şoförlü Araç Kiralama</h3>
+                    <p>Profesyonel şoförlerimizle günlük veya saatlik şoförlü araç kiralama.</p>
+                </div>
+                <div class="service-card" id="vip-chauffeur">
+                    <i class="fas fa-gem"></i>
+                    <h3>Şoförlü VIP Araç Kiralama</h3>
+                    <p>Mercedes Maybach ile VIP konforunda özel gün transferleri.</p>
+                </div>
+                <div class="service-card" id="wedding">
+                    <i class="fas fa-heart"></i>
+                    <h3>Düğün Aracı Kiralama</h3>
+                    <p>Düğün, nişan ve özel günleriniz için lüks araç filosu.</p>
+                </div>
+                <div class="service-card" id="intercity">
+                    <i class="fas fa-route"></i>
+                    <h3>Şehirlerarası VIP Transfer</h3>
+                    <p>İstanbul-Ankara, İzmir-Antalya dahil tüm güzergahlarda VIP transfer.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <strong>Telefon</strong>
+                            <a href="tel:+905513854575">+90 551 385 45 75</a>
+
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>E-posta</strong>
+                            <a href="mailto:info@ozkilicturizm.com">info@ozkilicturizm.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <a href="https://wa.me/905513854575" target="_blank">+90 551 385 45 75</a>
+
+                        </div>
+                    </div>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <input type="text" placeholder="Adınız Soyadınız" required>
+                    <input type="email" placeholder="E-posta" required>
+                    <input type="tel" placeholder="Telefon">
+                    <textarea placeholder="Mesajınız" rows="4" required></textarea>
+                    <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Referanslar -->
+    <section id="references" class="references-section">
+        <div class="container">
+            <h2 class="section-title">Referanslarımız</h2>
+            <p class="section-subtitle" style="text-align:center;">Kurumsal müşterilerimiz ve iş ortaklarımız</p>
+            <div class="references-grid">
+                <div class="ref-item"><i class="fas fa-building"></i> Kurumsal Firmalar</div>
+                <div class="ref-item"><i class="fas fa-hotel"></i> Oteller & Resorts</div>
+                <div class="ref-item"><i class="fas fa-plane"></i> Havayolu Partnerleri</div>
+                <div class="ref-item"><i class="fas fa-briefcase"></i> Kongre & Organizasyon</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Galeri</h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Galeri fotoğrafları dinamik yüklenecek -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <h2 class="section-title">Son Blog Yazıları</h2>
+            <div class="blog-grid" id="blogGrid">
+                <!-- Blog posts will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Özkılıç Turizm</h3>
+                    <p>Araç kiralama, filo kiralama, VIP araç hizmetleri, tur ve gezi organizasyonu gibi alanlarda
+                        faaliyet gösteren köklü ve prestijli bir taşımacılık şirketi. Mercedes Maybach ve Volkswagen
+                        Passat filosuyla hizmetinizdeyiz.</p>
+                    <div class="currency-info">
+                        <p><strong>Kur Bilgileri</strong></p>
+                        <p>USD: <span id="usdRate">-</span> TL</p>
+                        <p>EUR: <span id="eurRate">-</span> TL</p>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Kurumsal</h4>
+                    <ul>
+                        <li><a href="#about">Hakkımızda</a></li>
+                        <li><a href="#references">Referanslar</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#gallery">Galeri</a></li>
+                        <li><a href="#fleet-page">Filomuz</a></li>
+                        <li><a href="#price-list">Fiyat Listesi</a></li>
+                        <li><a href="#price-inquiry">Fiyat Sorgulama</a></li>
+                        <li><a href="#contact">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="#fleet">Filo Kiralama</a></li>
+                        <li><a href="#car-rental">Araç Kiralama</a></li>
+                        <li><a href="#chauffeur">Şoförlü Araç Kiralama</a></li>
+                        <li><a href="#vip-chauffeur">Şoförlü VIP Araç Kiralama</a></li>
+                        <li><a href="#wedding">Düğün Aracı Kiralama</a></li>
+                        <li><a href="#intercity">Şehirlerarası VIP Transfer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Yardıma İhtiyacınız Var Mı?</h4>
+                    <p>Size Yardımcı Olabiliriz</p>
+                    <a href="tel:+905513854575" class="footer-phone">+90 551 385 45 75</a>
+
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/905513854575" target="_blank" title="WhatsApp"><i
+                                class="fab fa-whatsapp"></i></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Özkılıç Turizm. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/905513854575" class="whatsapp-float" target="_blank" title="WhatsApp ile iletişime geçin">
+
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Araç Detay Modal -->
+    <div id="vehicleModal" class="vehicle-modal">
+        <div class="vehicle-modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div id="vehicleModalBody"></div>
+        </div>
+    </div>
+
+    <!-- Arama Overlay -->
+    <div id="searchOverlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 10000; background: rgba(10, 10, 10, 0.95); overflow-y: auto;">
+        <div style="position: relative; width: 100%; max-width: 600px; margin: 15vh auto; padding: 2rem;">
+            <button class="modal-close" id="searchClose" style="color: var(--text-light); border: none; background: transparent; font-size: 2rem; cursor: pointer; position: absolute; right: 15px; top: 15px;">&times;</button>
+            <h2 style="color: var(--gold-color); text-align: center; margin-bottom: 2rem;">Site İçi Arama</h2>
+            <input type="text" id="searchInput" placeholder="Ne aramıştınız? (Örn: yönetici, transfer...)" style="width: 100%; padding: 1.5rem; background: var(--secondary-color); border: 1px solid #333; color: var(--text-light); border-radius: 8px; font-size: 1.2rem; outline: none; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+            <div id="searchResults" style="margin-top: 1rem; color: #888; text-align: center;">Gizli yönetici paneli için 'yönetici' yazın.</div>
+        </div>
+    </div>
+
+    <!-- Yönetici Şifre Modal -->
+    <div id="adminLoginModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 10000; background: rgba(10, 10, 10, 0.95); align-items: center; justify-content: center;">
+        <div style="position: relative; width: 100%; max-width: 400px; padding: 2rem; background: var(--secondary-color); border: 1px solid var(--gold-color); border-radius: 10px; margin: 0 auto;">
+            <button class="modal-close" id="adminLoginClose" style="color: var(--text-light); border: none; background: transparent; font-size: 2rem; cursor: pointer; position: absolute; right: 15px; top: 15px;">&times;</button>
+            <h3 style="margin-bottom: 1rem; color: var(--gold-color); text-align: center; margin-top: 1rem;"><i class="fas fa-lock"></i> Yönetici Girişi</h3>
+            <p style="color: #888; font-size: 0.9rem; text-align: center; margin-bottom: 1.5rem;">Panele erişmek için şifrenizi girin.</p>
+            <input type="password" id="adminPassword" placeholder="Şifre (Mevcut: 829615)" style="width: 100%; padding: 1rem; margin-bottom: 1rem; background: rgba(0,0,0,0.5); border: 1px solid #333; color: var(--text-light); border-radius: 5px; outline: none;">
+            <button id="adminLoginSubmit" class="btn-primary" style="width: 100%;"><i class="fas fa-sign-in-alt"></i> Giriş Yap</button>
+            <div id="adminLoginError" style="color: red; margin-top: 1rem; text-align: center; display: none;">Hatalı şifre.</div>
+        </div>
+    </div>
+
+    <!-- Dynamic Admin Dashboard Container (Loaded via JS) -->
+    <div id="adminDashboardContainer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>
