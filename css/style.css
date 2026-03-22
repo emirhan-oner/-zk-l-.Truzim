@@ -417,7 +417,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('../images/vito.jpg') no-repeat center center;
+    background: url('../images/hero-bg.jpg') no-repeat center center;
 
 
     background-size: cover;
