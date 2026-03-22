@@ -89,8 +89,8 @@ const fleetData = [
         type: "sedan",
         icon: "fas fa-gem",
         images: [
-            "https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=800",
-            "https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=800"
+            "images/vito.jpg",
+            "images/vito.jpg"
         ],
         interior: [
             "Burmester 3D Surround Sistem",
@@ -107,8 +107,8 @@ const fleetData = [
         type: "sedan",
         icon: "fas fa-car",
         images: [
-            "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=800",
-            "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800"
+            "images/passat.jpg",
+            "images/passat.jpg"
         ],
         interior: [
             "Dijital Kokpit (Widescreen)",
@@ -125,8 +125,8 @@ const fleetData = [
         type: "sedan",
         icon: "fas fa-gem",
         images: [
-            "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800",
-            "https://images.unsplash.com/photo-1616422285623-138988def932?w=800"
+            "images/passat2.jpg",
+            "images/passat2.jpg"
         ],
         interior: [
             "BMW Theater Screen (Arka ekran)",
@@ -143,8 +143,8 @@ const fleetData = [
         type: "sedan",
         icon: "fas fa-car",
         images: [
-            "https://images.unsplash.com/photo-1523983388277-336a66bf9bc1?w=800",
-            "https://images.unsplash.com/photo-1556800572-1b8aeef2c54f?w=800"
+            "images/d09803810737f61b8bf3ba4735068bcc.jpg",
+            "images/d09803810737f61b8bf3ba4735068bcc.jpg"
         ],
         interior: [
             "BMW Curved Display",
@@ -160,8 +160,8 @@ const fleetData = [
         type: "sedan",
         icon: "fas fa-gem",
         images: [
-            "https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=800",
-            "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=800"
+            "images/passat.jpg",
+            "images/passat2.jpg"
         ],
         interior: [
             "Genişletilmiş arka diz mesafesi (Long)",
@@ -178,8 +178,8 @@ const fleetData = [
         type: "suv",
         icon: "fas fa-car-side",
         images: [
-            "https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=800",
-            "https://images.unsplash.com/photo-1563720225667-bb89133bd576?w=800"
+            "images/vito.jpg",
+            "images/vito.jpg"
         ],
         interior: [
             "Meridian Signature 1600W Ses Sistemi",

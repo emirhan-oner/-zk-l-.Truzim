@@ -417,7 +417,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?q=80&w=2070') no-repeat center center;
+    background: url('../images/vito.jpg') no-repeat center center;
 
 
     background-size: cover;
